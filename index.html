@@ -210,79 +210,100 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-/* MOBILE - 768px ku keela */
-@media (max-width: 768px) {
-
-  /* Title perusa iruntha chinna pannu */
-  h1 {
-    font-size: 26px !important;
-    text-align: center;
-  }
-  h2 {
-    font-size: 20px !important;
-    text-align: center;
-  }
-  p {
-    font-size: 14px !important;
-  }
-
-  /* Navbar - pakkathula pakkathula iruntha keela keela varum */
-  nav, .navbar, .header, .nav-links {
-    flex-direction: column !important;
-    text-align: center;
-    gap: 10px;
-  }
-
-  /* Toys Grid - 3-4 Card pakkathula iruntha 2 aakidum */
-  .toys-container, .products, .grid, .card-container, .toy-list {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 10px !important;
-    padding: 10px !important;
-  }
-
-  /* Oru Card */
-  .toy-card, .card, .product-card {
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 10px !important;
-  }
-
-  .toy-card img, .card img {
-    height: 140px !important;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-
-  /* Button perusa aakku - Click panna easy ah irukkum */
-  button, .btn, .add-btn {
-    width: 100% !important;
-    padding: 12px !important;
-    font-size: 15px !important;
-  }
-
-  /* Search bar */
-  input {
-    width: 100% !important;
-    font-size: 15px !important;
-  }
-
-  /* Hero / Banner image */
-  .hero, .banner {
-    height: auto !important;
-    padding: 20px 10px !important;
-    text-align: center;
-  }
+        * {
+  box-sizing: border-box;
 }
 
-/* CHINNA MOBILE - 480px ku keela - 1 Card mattum */
-@media (max-width: 480px) {
-  .toys-container, .products, .grid, .card-container, .toy-list {
-    grid-template-columns: 1fr !important;
-  }
+/* 2. For Kids Section - Main Problem Inga than da */
+/* Un products irukkura div ku ithu podu da */
+/* Athu per enna nu theriyalana, itha ellathukum podu da */
+
+.products, .toy-container, .container, .cards, .for-kids, main {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important; /* Mobile la 2 card pakkathula */
+  gap: 12px !important;
+  padding: 10px !important;
+  width: 100% !important;
+  flex-wrap: wrap !important;
 }
-    </style>
+
+/* 3. Oru Card ah ipdi maathu da */
+.card, .toy-card, .product, .product-card {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  height: auto !important;
+  padding: 10px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  overflow: hidden !important;
+}
+
+/* 4. Photo Fix */
+.card img, .toy-card img, .product img {
+  width: 100% !important;
+  height: 120px !important;
+  object-fit: contain !important;
+}
+
+/* 5. Text neettta varama irukka */
+.card h3, .card h2, .card p, .toy-card h3, .toy-card p {
+  width: 100% !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  line-height: 1.3 !important;
+  margin: 4px 0 !important;
+}
+
+.card p {
+  font-size: 12px !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* 3 line ku mela kaatathu */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 6. Button Fix - Veliya poogama irukka */
+.card button, .card a, .toy-card button {
+  width: 100% !important;
+  margin: 4px 0 !important;
+  padding: 8px 5px !important;
+  font-size: 13px !important;
+  display: block !important;
+}
+
+/* 7. Header Fix - Home Contact ellam keela keela varum */
+header, .navbar, nav {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  padding: 15px 10px !important;
+}
+nav a, .navbar a {
+  margin: 3px 8px !important;
+  display: inline-block !important;
+}
+
+/* 8. Hero Banner Fix */
+.hero, .banner, .top-banner {
+  width: 100% !important;
+  padding: 15px !important;
+  text-align: center !important;
+}
+
+/* 9. Categories Section - Keela veliya pooguthu la athuku */
+.categories, .category-list {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 10px !important;
+  padding: 10px !important;
+}
+</style>
+
 <body>
     <header>
         <div class="container">
