@@ -201,6 +201,87 @@ button{
     background-color: rgb(20, 51, 80);
     color: aliceblue;
 }
+        * {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* MOBILE - 768px ku keela */
+@media (max-width: 768px) {
+
+  /* Title perusa iruntha chinna pannu */
+  h1 {
+    font-size: 26px !important;
+    text-align: center;
+  }
+  h2 {
+    font-size: 20px !important;
+    text-align: center;
+  }
+  p {
+    font-size: 14px !important;
+  }
+
+  /* Navbar - pakkathula pakkathula iruntha keela keela varum */
+  nav, .navbar, .header, .nav-links {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 10px;
+  }
+
+  /* Toys Grid - 3-4 Card pakkathula iruntha 2 aakidum */
+  .toys-container, .products, .grid, .card-container, .toy-list {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+    padding: 10px !important;
+  }
+
+  /* Oru Card */
+  .toy-card, .card, .product-card {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 10px !important;
+  }
+
+  .toy-card img, .card img {
+    height: 140px !important;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  /* Button perusa aakku - Click panna easy ah irukkum */
+  button, .btn, .add-btn {
+    width: 100% !important;
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+
+  /* Search bar */
+  input {
+    width: 100% !important;
+    font-size: 15px !important;
+  }
+
+  /* Hero / Banner image */
+  .hero, .banner {
+    height: auto !important;
+    padding: 20px 10px !important;
+    text-align: center;
+  }
+}
+
+/* CHINNA MOBILE - 480px ku keela - 1 Card mattum */
+@media (max-width: 480px) {
+  .toys-container, .products, .grid, .card-container, .toy-list {
+    grid-template-columns: 1fr !important;
+  }
+}
     </style>
 <body>
     <header>
